@@ -10,8 +10,6 @@ public class UserEntity {
 
     private String role;
 
-
-
     public UserEntity(String username, String password, double balance, int contact,String role) {
         this.username = username;
         this.password = password;
@@ -32,16 +30,6 @@ public class UserEntity {
                 '}';
     }
 
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        UserEntity that = (UserEntity) object;
-        return contact == that.contact && Objects.equals(username, that.username) && Objects.equals(password, that.password);
-    }
-
-    public int hashCode() {
-        return Objects.hash( username, password, contact);
-    }
 
     public String getUsername() {
         return username;
